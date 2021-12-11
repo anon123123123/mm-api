@@ -8,14 +8,34 @@ const PORT = 4000;
 // Database Connect
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost:27017/mma-api', {
-    useNewUrlParser: true
-    //useUnifiedTopology: true
+mongoose.connect('mongodb://127.0.0.1:27017/', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
 
 // Setup Parsing 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
+
+
+// Check Content-Type 
+app.post('/api/*', (req, res, next) => {
+    if (!req.is('application/json')) {
+        // Send error here
+        res.send('Content-Type Incorrect');
+    } else {
+        next()    
+    }
+});
+
+app.put('/api/*', (req, res, next) => {
+    if (!req.is('application/json')) {
+        // Send error here
+        res.send('Content-Type Incorrect');
+    } else {
+        next()    
+    }
+});
 
 
 app.get('/', (req, res) =>

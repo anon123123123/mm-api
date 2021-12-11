@@ -1,7 +1,7 @@
 {
   "name": "mm-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mock media management app API test",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js --exec babel-node -e js",
@@ -20,5 +20,13 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anon123123123/mm-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anon123123123/mm-api/issues"
+  },
+  "homepage": "https://github.com/anon123123123/mm-api#readme"
 }

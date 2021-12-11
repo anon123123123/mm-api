@@ -1,2 +1,2 @@
 # mm-api
-Mock media management app API test
+Mock media management app API 
